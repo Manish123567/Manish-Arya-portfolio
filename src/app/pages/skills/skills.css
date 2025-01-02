@@ -1,0 +1,1638 @@
+/*** IN PROGRESS ***/
+
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
+:root {
+	--c1: #2187e7;
+	--b2: #222;
+	--b3: #333;
+	--w1: #fff;
+	--w2: #eee;
+	--t1: all 0.5s ease 0s;
+} */
+
+.skill {
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: "Roboto", sans-serif;
+	font-size: 15px;
+}
+
+/* * {
+	box-sizing: border-box;
+}
+
+*:before,
+*:after {
+	box-sizing: border-box;
+	content: "";
+} */
+
+.content {
+	width: 80vw;
+	height: 80vh;
+	background: #fff0;
+}
+
+.profile-skills {
+	display: flex;
+	top: 150px;
+	position: relative;
+	width: 100%;
+	align-items: flex-start;
+}
+
+.profile-skills > div {
+	width: 32%;
+	margin-right: 3%;
+	border-radius: 2px;
+	position: relative;
+}
+
+ul.skills {
+	width: 100%;
+	position: relative;
+	padding: 25px 35px;
+	background: linear-gradient(0deg, var(--c1) 0 10px,	var(--b2) 0 calc(100% - 10px), var(--c1) 0 100%);
+}
+
+ul.skills2 {
+	--c1: #9acd32;
+}
+
+ul.skills3 {
+	--c1: #ff4500;
+}
+
+ul.skills:before {
+	content: "Frontend";
+	text-transform: uppercase;
+	position: absolute;
+	top: -75px;
+	height: 50px;
+	color: var(--w1);
+	background-color: var(--b2);
+	width: 100%;
+	left: 0;
+	padding: 15px 15px 0 0;
+	text-align: end;
+	font-weight: 600;
+	z-index: 1;
+	transition: var(--t1);
+	font-size: 30px;
+	line-height: 35px;
+	transform: scaleY(1.65);
+}
+
+ul.skills2:before {
+	content: "Backend";
+}
+
+ul.skills3:before {
+	content: "Designing";
+}
+
+ul.skills:after {
+	content: "";
+	position: absolute;
+	border: 40px solid #fff0;
+	border-top-color: var(--b2);
+	top: -30px;
+	left: 10px;
+	z-index: 0;
+	transition: var(--t1);
+	filter: drop-shadow(0 11px 0.1px var(--w1));
+}
+
+ul.skills:hover:before,
+label:hover + ul.skills:before,
+input:checked + label + ul.skills:before {
+	transition: var(--t1);
+	background-color: #2187e7;
+	background-position: 0 50%;
+}
+ul.skills:hover:after,
+label:hover + ul.skills:after,
+input:checked + label + ul.skills:after {
+	top: -20px;
+	transition: var(--t1);
+	border-top-color: #2187e7;
+}
+
+ul.skills2:hover:before,
+label:hover + ul.skills2:before,
+input:checked + label + ul.skills2:before {
+	background-color: #9acd32;
+}
+ul.skills2:hover:after,
+label:hover + ul.skills2:after,
+input:checked + label + ul.skills2:after {
+	border-top-color: #9acd32;
+}
+
+ul.skills3:hover:before,
+label:hover + ul.skills3:before,
+input:checked + label + ul.skills3:before {
+	background-color: #ff4500;
+}
+ul.skills3:hover:after,
+label:hover + ul.skills3:after,
+input:checked + label + ul.skills3:after {
+	border-top-color: #ff4500;
+}
+
+ul.skills li {
+	--per: 50;
+	--dur: calc(calc(var(--per) / 100) * 1.5s);
+	margin: 0 0 5px 0;
+	list-style: none;
+	padding: 20px 0;
+	position: relative;
+	text-transform: uppercase;
+	font-size: 15px;
+	color: var(--w2);
+}
+
+ul.skills li:before {
+	content: "";
+	position: absolute;
+	background: #1c1c1c;
+	height: 16px;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	border-radius: 2px;
+	border: 1px solid #111;
+	border-color: #111 #323232 #323232 #111;
+	--track: #2292dd40;
+	background: linear-gradient(
+		90deg,
+		var(--track) calc(calc(var(--per) * 1%) + 4px),
+		#1c1c1c calc(calc(var(--per) * 1%) + 4px)
+	);
+}
+
+ul.skills2 li:before {
+	--track: #9acd3240;
+}
+
+ul.skills3 li:before {
+	--track: #ff450040;
+}
+
+ul.skills li:after {
+	content: "";
+	height: 11px;
+	margin: 0 0 2px 0;
+	background: #2187e7;
+	position: absolute;
+	box-shadow: 0px 0px 10px 1px #00c6ff66;
+	left: 3px;
+	width: 0%;
+	bottom: 0;
+	transition: all var(--dur) ease 0s;
+	animation: start 1s ease 0s 2 alternate;
+}
+
+ul.skills2 li:after {
+	background: #9acd32;
+	box-shadow: 0px 0px 10px 1px #9acd3299;
+}
+
+ul.skills3 li:after {
+	background: #ff4500;
+	box-shadow: 0px 0px 10px 1px #ff450099;
+}
+
+ul.skills li:hover {
+	filter: brightness(1.5);
+	transition: var(--t1);
+}
+
+ul.skills:hover li:after,
+label:hover + ul.skills li:after,
+input:checked + label + ul.skills li:after {
+	width: calc(calc(var(--per) * 1%) - 2px);
+}
+
+@keyframes start {
+	100% {
+		width: calc(calc(var(--per) * 1%) - 2px);
+	}
+}
+
+ul.skills2 li:after {
+	animation-delay: 0.5s;
+}
+ul.skills3 li:after {
+	animation-delay: 1s;
+}
+
+ul.skills li span {
+	font-weight: 500;
+}
+
+ul.skills li span:before {
+	position: absolute;
+	right: -25px;
+	top: 43px;
+	transition: var(--t1);
+	content: "";
+	opacity: 1;
+	border: 7px solid #fff0;
+}
+
+ul.skills li:hover span:before,
+.profile-skills input:checked + label + ul.skills li span:before {
+	transition: var(--t1);
+	right: calc(calc(calc(100 - var(--per)) * 1%) - 12px);
+	opacity: 1;
+	border-right-color: #2187e7;
+}
+
+ul.skills2 li:hover span:before,
+.profile-skills input:checked + label + ul.skills2 li span:before {
+	border-right-color: #9acd32;
+}
+
+ul.skills3 li:hover span:before,
+.profile-skills input:checked + label + ul.skills3 li span:before {
+	border-right-color: #ff4500;
+}
+
+ul.skills li span:after {
+	position: absolute;
+	right: -40px;
+	top: 38px;
+	transition: var(--t1);
+	counter-reset: percent var(--per);
+	content: counter(percent) "%";
+	content: counter(percent);
+	color: var(--b2);
+	opacity: 1 !important;
+	padding: 4px 6px;
+	border-radius: 1px;
+	font-weight: bold;
+	pointer-events: none;
+}
+
+ul.skills li:hover span:after,
+.profile-skills input:checked + label + ul.skills li span:after {
+	transition: var(--t1);
+	right: calc(calc(85 - var(--per)) * 1%);
+	right: calc(calc(calc(100 - var(--per)) * 1%) - 40px);
+	opacity: 1;
+	background: var(--c1);
+}
+
+ul.skills2 li:hover span:after {
+	background: #9acd32;
+}
+
+ul.skills3 li:hover span:after {
+	background: #ff4500;
+}
+
+/*********************/
+/*** SKILLS VALUES ***/
+/*********************/
+
+ul.skills li.sk-ani { --per: 85; }
+ul.skills li.sk-cms { --per: 75; }
+ul.skills li.sk-dis { --per: 90; }
+ul.skills li.sk-dtb { --per: 65; }
+ul.skills li.sk-pro { --per: 60; }
+ul.skills li.sk-res { --per: 90; }
+
+ul.skills li.sk-gim { --per: 90; }
+ul.skills li.sk-ado { --per: 60; }
+ul.skills li.sk-not { --per: 85; }
+ul.skills li.sk-tri { --per: 70; }
+ul.skills li.sk-wor { --per: 90; }
+ul.skills li.sk-tre { --per: 65; }
+
+ul.skills li.sk-css { --per: 95; }
+ul.skills li.sk-htm { --per: 90; }
+ul.skills li.sk-jav { --per: 70; }
+ul.skills li.sk-php { --per: 80; }
+ul.skills li.sk-sql { --per: 65; }
+ul.skills li.sk-pug { --per: 40; }
+
+/*********************/
+/***** TOP LABELS ****/
+/*********************/
+
+.profile-skills input {
+	display: none;
+}
+
+.profile-skills label {
+	background: var(--w1);
+	position: absolute;
+	top: -61px;
+	left: 22px;
+	z-index: 2;
+	width: 55px;
+	height: 55px;
+	border-radius: 100%;
+	cursor: pointer;
+	transition: var(--t1);
+	box-shadow: 0 0 0 0 var(--w1);
+}
+
+.profile-skills label:before {
+	content: "";
+	background: #fff0;
+	position: absolute;
+	top: 12px;
+	left: 11px;
+	z-index: 2;
+	border: 9px solid var(--b2);
+	border-top-width: 0;
+	border-right-width: 0;
+	transform: rotate(-45deg);
+	width: 33px;
+	height: 22px;
+	border-radius: 2px;
+	transition: var(--t1);
+}
+
+.profile-skills label:hover {
+	box-shadow: 0 0 0 3px var(--w1);
+	transition: var(--t1);
+}
+
+.profile-skills label:hover:before {
+	border-color: var(--b2);
+	transition: var(--t1);
+}
+
+.profile-skills input:checked + label {
+	box-shadow: 0 0 0 6px var(--w1);
+	transition: var(--t1);
+}
+
+.profile-skills input:checked + label:before {
+	border-color: #2187e7;
+}
+
+.profile-skills input#sk2:checked + label:before {
+	border-color: #9acd32;
+}
+
+.profile-skills input#sk3:checked + label:before {
+	border-color: #ff4500;
+}
+
+label[htmlFor="sk1"] {
+	left: -10px;
+}
+label[htmlFor="sk2"] {
+	left: calc(34% - 6px);
+}
+
+
+label[htmlFor="sk1"]:before {
+	border-color: cornflowerblue;
+}
+label[htmlFor="sk2"]:before {
+	border-color: yellowgreen;
+}
+label[htmlFor="sk3"]:before {
+	border-color: orangered;
+}
+
+/*********************/
+/*** BOTTOM LABELS ***/
+/*********************/
+
+ul.skills li.more {
+	padding: 0;
+	margin-bottom: 20px;
+}
+
+ul.skills li.more:before,
+ul.skills li.more:after {
+	display: none;
+}
+
+ul.skills li.more:hover {
+	filter: none !important;
+}
+
+ul.skills li.more div {
+	max-height: 0;
+	transition: var(--t1);
+	overflow: hidden;
+	padding: 0;
+	width: 100%;
+}
+ul.skills li.more input:checked ~ div {
+	max-height: 150px;
+	transition: var(--t1);
+	padding: 20px 0 0;
+}
+
+ul.skills li.more div span:before,
+ul.skills li.more div span:after {
+	display: none;
+}
+
+ul.skills li.more label {
+	background: linear-gradient(163deg, var(--b2) 50%, var(--w1) 50%);
+	right: 0;
+	left: inherit;
+	top: inherit;
+	bottom: -70px;
+	color: var(--b2);
+	background-size: 100% 300%;
+	background-position-y: 100%;
+	transition: var(--t1);
+	width: 55px;
+	height: 55px;
+	right: -50px;
+}
+
+ul.skills li.more label:before {
+	border: 0;
+	height: 100%;
+	width: 100%;
+	transform: rotate(0deg);
+	content: "+";
+	content: "\271A";
+	font-size: 45px;
+	line-height: 55px;
+	left: 0;
+	top: 0;
+	text-align: center;
+	color: var(--c1);
+}
+
+ul.skills li.more label:hover {
+	background-position-y: 0%;
+	color: var(--w1) !important;
+	transition: var(--t1);
+	box-shadow: 0 0 0 10px var(--w1);
+}
+
+ul.skills li.more span {
+	background: #1c1c1c;
+	border-radius: 1px;
+	margin: 10px 10px 1px 1px;
+	padding: 4px 8px;
+	display: inline-block;
+	border: 1px solid #111;
+	border-color: #111 #323232 #323232 #111;
+}
+
+ul.skills li.more span:hover {
+	color: var(--w0);
+	background: var(--c1);
+	box-shadow: 0px 0px 5px 1px var(--c1);
+	border-color: #fff2;
+}
+
+ul.skills li.more input:checked + label {
+	box-shadow: 0 0 0 9px var(--w1);
+	background-position-y: 0%;
+	color: var(--w0);
+	bottom: -70px;
+}
+
+ul.skills li.more input:checked + label:before {
+	content: "\2759";
+	transform: rotate(90deg);
+	font-weight: 600;
+}
+
+ul.skills li.more input:checked + label:hover {
+	box-shadow: 0 0 0 0 var(--w1);
+	background-position-y: 100%;
+	color: var(--b2) !important;
+}
+
+/*********************/
+/*** MEDIA QUERIES ***/
+/*********************/
+
+@media only screen and (max-width: 1024px) {
+	.content { height: 60vh; }
+	.profile-skills {
+		flex-direction: row;
+    flex-wrap: wrap;
+		top: 20px;
+	}
+	.profile-skills > div {
+		width: 47% !important;
+	}
+	.profile-skills > div:nth-child(3) {
+		width: 98% !important;
+		margin-top: 120px;
+	}
+}
+
+
+/*** Mobile view disabled to get (almost) the desired thumbnail ***/
+/*** Uncomment below code to add the media query for mobile view ***/
+
+
+@media only screen and (max-width: 768px) {
+	.content { height: 60vh; }
+	.profile-skills {
+		flex-direction: row;
+    flex-wrap: wrap;
+		top: 20px;
+	}
+	.profile-skills > div {
+		width: 98% !important;
+	}
+	.profile-skills > div:nth-child(2), 
+	.profile-skills > div:nth-child(3) {
+		margin-top: 120px;
+	}
+	ul.skills li:after {
+		width: calc(calc(var(--per) * 1%) - 2px);
+	}
+	ul.skills li span:before {
+		transition: var(--t1);
+		right: calc(calc(96.5 - var(--per)) * 1%);
+		opacity: 1;
+		border-right-color: #2187e7;
+	}
+	ul.skills2 li span:before {
+		border-right-color: #9acd32;
+	}
+	ul.skills3 li span:before {
+		border-right-color: #ff4500;
+	}
+	ul.skills li span:after {
+		transition: var(--t1);
+		right: calc(calc(calc(100 - var(--per)) * 1%) - 40px);
+		opacity: 1;
+		background: var(--c1);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.skills {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 70px);
+    margin: 20px;
+  }
+ .skl{
+     margin-left: 20px;
+     color: yellow;
+ }
+.sklLine{
+    position: relative;
+    bottom: 8px;
+    visibility: hidden;
+    padding-left: 6px;
+    color: greenyellow;
+}
+  .ProgWidth {
+    padding: 0px 20px;
+  }
+  .skillDiv {
+    height: 5px;
+    width: 100%;
+    background-color: gray;
+  }
+  .skillBar {
+    display: block;
+    height: 5px;
+    background-color: rgb(26, 204, 19);
+  }
+  .p {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .htmlBar {
+    width: 70%;
+    animation: html 3s 1s 5 forwards;
+  }
+  .cssBar {
+    width: 70%;
+    animation: css 3s 1s 5 forwards;
+  }
+  .jsBar {
+    width: 75%;
+    animation: js 3s 1s 5 forwards;
+  }
+  
+  .javaBar {
+    width: 85%;
+    animation: java 3s 1s 5 forwards;
+  }
+  .ccpBar {
+    width: 80%;
+    animation: ccp 3s 1s 5 forwards;
+  }
+  .reactBar {
+    width: 10%;
+    animation: react 3s 1s 5 forwards;
+  }
+  .nodeBar {
+    width: 35%;
+    animation: node 3s 1s 5 forwards;
+  }
+  .sqlBar {
+    width: 85%;
+    animation: sql 3s 1s 5 forwards;
+  }
+  
+  @keyframes html {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 95%;
+    }
+  }
+  @keyframes css {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 70%;
+    }
+  }
+  @keyframes js {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 75%;
+    }
+  }
+  @keyframes java {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 85%;
+    }
+  }
+  @keyframes ccp {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 80%;
+    }
+  }
+  @keyframes react {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 70%;
+    }
+  }
+  @keyframes node {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 35%;
+    }
+  }
+
+  @keyframes sql {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 85%;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SKILLS5 */
+
+  #SkillBox {
+    font-size: 20px;
+    font-family: 'Indie Flower', cursive;
+    width: 95%;
+    height: auto;
+    margin: 40px auto;
+    background-color: #0c0b0b;
+    border: 1px solid #cdcdcd;
+    padding: 10px;
+    border-radius:20px;
+    -o-border-radius:20px;
+    -webkit-border-radius:20px;
+    -ms-border-radius:20px;
+    -moz-border-radius:20px;  
+}
+#SkillBox img {
+    width: 20%;
+    height: 10%;
+    margin: auto 35%;
+    padding: 10px;
+}
+
+/* Media query for screen size less than 760px */
+@media screen and (max-width: 768px) {
+    #SkillBox img {
+      width: 50%;  /* Increase the width */
+      height: 40%; /* Increase the height */
+      margin: auto; /* Adjust margin if needed */
+    }
+  }
+
+  /* @media screen and (max-width: 960px) {
+    #SkillBox img {
+      width: 60%;  
+      height: 50%; 
+      margin: auto; 
+    }
+  } */
+
+
+
+.SkillBar {
+    width: 90%;
+    height: 50px;
+    position: relative;
+    background: rgba(241, 225, 225, 0.3);
+    margin: 20px auto;
+}
+/* #Skill-HTML {
+    width: 90%;
+    animation: Animate-HTML 4s;
+    -webkit-animation: Animate-HTML 4s;
+    -moz-animation: Animate-HTML 4s;
+    -o-animation: Animate-HTML 4s;
+    height: 50px;
+    position: absolute;
+    background-color: #10069b;
+}
+@keyframes Animate-HTML {
+    from {
+    width: 10px;
+}
+to {
+    width: 90%}
+}@-webkit-keyframes Animate-HTML {
+    from {
+    width: 10px;
+}
+to {
+    width: 90%}
+}@-moz-keyframes Animate-HTML {
+    from {
+    width: 10px;
+}
+to {
+    width: 90%}
+}@-o-keyframes Animate-HTML {
+    from {
+    width: 10px;
+}
+to {
+    width: 90%}
+} */
+
+.Skill-HTML {
+    width: 10px; /* Start at initial width */
+    height: 50px;
+    position: absolute;
+    background-color: #10069b;
+    transition: width 4s ease; /* Smooth transition */
+  }
+  
+  .Skill-HTML.animate {
+    width: 90%; /* Target width */
+  }
+  
+  /* Keyframes for fallback animation (optional) */
+  @keyframes Animate-HTML {
+    from {
+      width: 10px;
+    }
+    to {
+      width: 90%;
+    }
+  }
+
+
+.Skill-CSS {
+    /* animation: Animate-CSS 5s;
+    -webkit-animation: Animate-CSS 5s;
+    -moz-animation: Animate-CSS 5s;
+    -o-animation: Animate-CSS 5s;
+    width: 90%;
+    height: 50px;
+    position: absolute;
+    background-color: #10069b; */
+    width: 10px; /* Start at initial width */
+    height: 50px;
+    position: absolute;
+    background-color: #10069b;
+    transition: width 4s ease;
+}
+
+.Skill-CSS.animate {
+    width: 90%; /* Target width */
+  }
+
+@keyframes Animate-CSS {
+    from {
+    width: 10px;
+}
+to {
+    width: 90%}
+}
+
+.Skill-jQuery {
+    /* animation: Animate-jQuery 5s;
+    -webkit-animation: Animate-jQuery 5s;
+    -moz-animation: Animate-jQuery 5s;
+    -o-animation: Animate-jQuery 5s;
+    width: 70%;
+    height: 50px;
+    position: absolute; */
+    width: 10px; /* Start at initial width */
+    height: 50px;
+    position: absolute;
+    transition: width 4s ease;
+    background-color: #0793f7;
+}
+
+.Skill-jQuery.animate {
+    width: 70%; /* Target width */
+  }
+
+@keyframes Animate-jQuery {
+    from {
+    width: 10px;
+}
+to {
+    width: 70%}
+}
+
+.Skill-JS {
+    /* animation: Animate-JS 4s;
+    -webkit-animation: Animate-JS 4s;
+    -moz-animation: Animate-JS 4s;
+    -o-animation: Animate-JS 4s;
+    width: 80%;
+    height: 50px;
+    position: absolute; */
+    width: 10px; /* Start at initial width */
+    height: 50px;
+    position: absolute;
+    transition: width 4s ease;
+    background-color: #0f69ef;
+}
+
+.Skill-JS.animate {
+    width: 80%; /* Target width */
+  }
+
+@keyframes Animate-JS {
+    from {
+    width: 10px;
+}
+to {
+    width: 80%}
+}
+
+.Skill-XML {
+    /* animation: Animate-XML 4s;
+    -webkit-animation: Animate-XML 4s;
+    -moz-animation: Animate-XML 4s;
+    -o-animation: Animate-XML 4s;
+    width: 60%;
+    height: 50px;
+    position: absolute; */
+    width: 10px; /* Start at initial width */
+    height: 50px;
+    position: absolute;
+    transition: width 4s ease;
+    background-color: #419ceb;
+}
+
+.Skill-XML.animate {
+    width: 60%; /* Target width */
+  }
+
+@keyframes Animate-XML {
+    from {
+    width: 10px;
+}
+to {
+    width: 60%}
+}
+
+.Skill-C {
+    /* animation: Animate-C 4s;
+    -webkit-animation: Animate-C 4s;
+    -moz-animation: Animate-C 4s;
+    -o-animation: Animate-C 4s;
+    width: 70%;
+    height: 50px;
+    position: absolute; */
+    width: 10px; /* Start at initial width */
+    height: 50px;
+    position: absolute;
+    transition: width 4s ease;
+    background-color: #0793f7;
+}
+
+.Skill-C.animate {
+    width: 70%; /* Target width */
+  }
+
+@keyframes Animate-C {
+    from {
+    width: 10px;
+}
+to {
+    width: 70%}
+}
+
+.Skill-JAVA {
+    /* animation: Animate-JAVA 4s;
+    -webkit-animation: Animate-JAVA 4s;
+    -moz-animation: Animate-JAVA 4s;
+    -o-animation: Animate-JAVA 4s;
+    width: 85%;
+    height: 50px;
+    position: absolute; */
+    width: 10px; /* Start at initial width */
+    height: 50px;
+    position: absolute;
+    transition: width 4s ease;
+    background-color: #044ab3;
+}
+
+.Skill-JAVA.animate {
+    width: 85%; /* Target width */
+  }
+
+@keyframes Animate-JAVA {
+    from {
+    width: 10px;
+}
+to {
+    width: 85%}
+}
+
+.Skill-PHP {
+    /* animation: Animate-PHP 4s;
+    -webkit-animation: Animate-PHP 4s;
+    -moz-animation: Animate-PHP 4s;
+    -o-animation: Animate-PHP 4s;
+    width: 90%;
+    height: 50px;
+    position: absolute; */
+    width: 10px; /* Start at initial width */
+    height: 50px;
+    position: absolute;
+    transition: width 4s ease;
+    background-color: #10069b;
+}
+
+.Skill-PHP.animate {
+    width: 90%; /* Target width */
+  }
+
+@keyframes Animate-PHP {
+    from {
+    width: 10px;
+}
+to {
+    width: 90%}
+}
+
+.Skill-SQL {
+    /* animation: Animate-SQL 4s;
+    -webkit-animation: Animate-SQL 4s;
+    -moz-animation: Animate-SQL 4s;
+    -o-animation: Animate-SQL 4s;
+    width: 70%;
+    height: 50px;
+    position: absolute; */
+    width: 10px; /* Start at initial width */
+    height: 50px;
+    position: absolute;
+    transition: width 4s ease;
+    background-color: #0793f7;
+}
+
+.Skill-SQL.animate {
+    width: 70%; /* Target width */
+  }
+
+@keyframes Animate-SQL {
+    from {
+    width: 10px;
+}
+to {
+    width: 70%}
+}
+
+.Skill-VBNET {
+    /* animation: Animate-VBNET 4s;
+    -webkit-animation: Animate-VBNET 4s;
+    -moz-animation: Animate-VBNET 4s;
+    -o-animation: Animate-VBNET 4s;
+    width: 90%;
+    height: 50px;
+    position: absolute; */
+    width: 10px; /* Start at initial width */
+    height: 50px;
+    position: absolute;
+    transition: width 4s ease;
+    background-color: #10069b;
+}
+
+.Skill-VBNET.animate {
+    width: 90%; /* Target width */
+  }
+
+@keyframes Animate-VBNET {
+    from {
+    width: 10px;
+}
+to {
+    width: 90%}
+}
+
+.Skill-Mongo {
+    /* animation: Animate-Mongo 5s;
+    -webkit-animation: Animate-Mongo 5s;
+    -moz-animation: Animate-Mongo 5s;
+    -o-animation: Animate-Mongo 5s;
+    width: 70%;
+    height: 50px;
+    position: absolute; */
+    width: 10px; /* Start at initial width */
+    height: 50px;
+    position: absolute;
+    transition: width 4s ease;
+    background-color: #0793f7;
+}
+
+
+.Skill-Mongo.animate {
+    width: 70%; /* Target width */
+  }
+
+@keyframes Animate-Mongo {
+    from {
+    width: 10px;
+}
+to {
+    width: 70%}
+}
+
+
+.Skill-Sql {
+    /* animation: Animate-Sql 5s;
+    -webkit-animation: Animate-Sql 5s;
+    -moz-animation: Animate-Sql 5s;
+    -o-animation: Animate-Sql 5s;
+    width: 70%;
+    height: 50px;
+    position: absolute; */
+    width: 10px; /* Start at initial width */
+    height: 50px;
+    position: absolute;
+    transition: width 4s ease;
+    background-color: #0793f7;
+}
+
+
+.Skill-Sql.animate {
+    width: 70%; /* Target width */
+  }
+
+@keyframes Animate-Sql {
+    from {
+    width: 10px;
+}
+to {
+    width: 70%}
+}
+
+
+.Skill-Node {
+    /* animation: Animate-Node 5s;
+    -webkit-animation: Animate-Node 5s;
+    -moz-animation: Animate-Node 5s;
+    -o-animation: Animate-Node 5s;
+    width: 70%;
+    height: 50px;
+    position: absolute; */
+    width: 10px; /* Start at initial width */
+    height: 50px;
+    position: absolute;
+    transition: width 4s ease;
+    background-color: #0793f7;
+}
+
+.Skill-Node.animate {
+    width: 70%; /* Target width */
+  }
+
+@keyframes Animate-Node {
+    from {
+    width: 10px;
+}
+to {
+    width: 70%}
+}
+
+.Skill-Express {
+    /* animation: Animate-Express 5s;
+    -webkit-animation: Animate-Express 5s;
+    -moz-animation: Animate-Express 5s;
+    -o-animation: Animate-Express 5s;
+    width: 70%;
+    height: 50px;
+    position: absolute; */
+    width: 10px; /* Start at initial width */
+    height: 50px;
+    position: absolute;
+    transition: width 4s ease;
+    background-color: #0793f7;
+}
+
+
+.Skill-Express.animate {
+    width: 70%; /* Target width */
+  }
+
+@keyframes Animate-Express {
+    from {
+    width: 10px;
+}
+to {
+    width: 70%}
+}
+.Skill-Authenticate {
+    /* animation: Animate-Authenticate 5s;
+    -webkit-animation: Animate-Authenticate 5s;
+    -moz-animation: Animate-Authenticate 5s;
+    -o-animation: Animate-Authenticate 5s;
+    width: 70%;
+    height: 50px;
+    position: absolute; */
+    width: 10px; /* Start at initial width */
+    height: 50px;
+    position: absolute;
+    transition: width 4s ease;
+    background-color: #0793f7;
+}
+
+
+.Skill-Authenticate.animate {
+    width: 70%; /* Target width */
+  }
+
+@keyframes Animate-Authenticate {
+    from {
+    width: 10px;
+}
+to {
+    width: 70%}
+}
+
+.Skill-Database {
+    /* animation: Animate-Database 5s;
+    -webkit-animation: Animate-Database 5s;
+    -moz-animation: Animate-Database 5s;
+    -o-animation: Animate-Database 5s;
+    width: 70%;
+    height: 50px;
+    position: absolute; */
+    width: 10px; /* Start at initial width */
+    height: 50px;
+    position: absolute;
+    transition: width 4s ease;
+    background-color: #0793f7;
+}
+
+.Skill-Database.animate {
+    width: 70%; /* Target width */
+  }
+
+@keyframes Animate-Database {
+    from {
+    width: 10px;
+}
+to {
+    width: 70%}
+}
+
+
+.Skill-Restful {
+    /* animation: Animate-Restful 5s;
+    -webkit-animation: Animate-Restful 5s;
+    -moz-animation: Animate-Restful 5s;
+    -o-animation: Animate-Restful 5s;
+    width: 75%;
+    height: 50px;
+    position: absolute; */
+    width: 10px; /* Start at initial width */
+    height: 50px;
+    position: absolute;
+    transition: width 4s ease;
+    background-color: #0765db;
+}
+
+.Skill-Restful.animate {
+    width: 75%; /* Target width */
+  }
+
+@keyframes Animate-Restful {
+    from {
+    width: 10px;
+}
+to {
+    width: 75%}
+}
+
+.Skill-Area {
+    z-index: 1;
+    float: left;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: -60px;
+    text-shadow: none;
+    color: #fff;
+    font-family: Lato-Regular, sans-serif;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+	.Skill-Area{
+		font-size:14px;
+	}
+}
+.PercentText {
+    z-index: 3;
+    position: relative;
+    padding-right: 15px;
+    /* margin-top: 15px; */
+    float: right;
+    text-shadow: none;
+    color: #fff;
+    font-family: Lato-Regular, sans-serif;
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SKILLS6 */
+.base-abt, :after, :before {
+	box-sizing: border-box;
+  }
+  
+  /* body {
+	background: #1F2428;
+	text-align: center;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  }
+   */
+  .sect {
+	display: inline-block;
+	width: 10%;
+	margin: 50px 0;
+	text-align: center;
+	min-width: 320px;
+	position: relative;
+  }
+  
+  .tooltip {
+	position: absolute;
+	background: #070606;
+	padding: 3px;
+	font-weight: 100;
+	font-size: 12px;
+	border-radius: 2px;
+	border: 1px solid  #ddd;
+	bottom: 100%;
+	left: 50%;
+	opacity: 0;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+	-ms-transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+  }
+  .tooltip:after {
+	content: "" attr(tooltip) "";
+	margin-left: 3px;
+	color: #2DABD8;
+  }
+  .tooltip:before {
+	content: '';
+	width: 8px;
+	height: 8px;
+	background: #2DABD8;
+	display: inline-block;
+	margin-right: 5px;
+  }
+  
+  .graph {
+	width: 300px;
+	height: 150px;
+	position: relative;
+	margin: auto;
+	text-align: center;
+	color: #fff;
+	font-size: 22px;
+	line-height: 280px;
+	font-weight: 600;
+	border-radius: 150px 150px 0 0;
+	overflow: hidden;
+	color: #0ff;
+  }
+  .graph:before, .graph:after {
+	content: '';
+	width: 300px;
+	height: 150px;
+	border: 50px solid #0ff;
+	border-top: none;
+	position: absolute;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+	-ms-transform-origin: 50% 0%;
+	-webkit-transform-origin: 50% 0%;
+	transform-origin: 50% 0%;
+	border-radius: 0 0 300px 300px;
+	-webkit-animation: demo 2s;
+	animation: demo 2s;
+	left: 0;
+	top: 100%;
+	z-index: 5;
+  }
+  .graph:after {
+	z-index: 3;
+	border-color: rgba(250, 243, 243, 0.233);
+	-ms-transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	transform: rotate(180deg);
+  }
+  .graph:hover:before {
+	opacity: .8;
+	cursor: pointer;
+  }
+  .graph:hover + .tooltip {
+	bottom: 105%;
+	opacity: 1;
+  }
+  
+  .multi-graph {
+	width: 300px;
+	height: 150px;
+	position: relative;
+	margin: auto;
+	color: #fff;
+	font-size: 22px;
+	line-height: 280px;
+	font-weight: 600;
+  }
+  .multi-graph:before {
+	content: '';
+	width: 300px;
+	height: 150px;
+	border: 50px solid rgba(0, 0, 0, 0.15);
+	border-bottom: none;
+	position: absolute;
+	-ms-transform-origin: 50% 0%;
+	-webkit-transform-origin: 50% 0%;
+	transform-origin: 50% 0%;
+	border-radius: 300px 300px 0 0;
+	left: 0;
+	top: 0;
+  }
+  .multi-graph .graph {
+	position: absolute;
+	top: 0;
+	left: 0;
+  }
+  .multi-graph .graph:after {
+	background: #eee;
+	border: medium none;
+	border-radius: 2px;
+	color: #333;
+	font-weight: 200;
+	content: "" attr(data-name) "";
+	display: inline-block;
+	font-size: 12px;
+	height: 20px;
+	left: 50%;
+	line-height: 20px;
+	padding: 0 5px;
+	top: 50px;
+	z-index: 0;
+	-ms-transform: rotate(0deg) translateX(-50%);
+	-webkit-transform: rotate(0deg) translateX(-50%);
+	transform: rotate(0deg) translateX(-50%);
+	width: auto;
+	opacity: 0;
+  }
+  .multi-graph .graph:hover:after {
+	opacity: 1;
+	top: 70px;
+  }
+  
+  .model-1 .graph {
+	color: #0532fc;
+  transition: color 1.5s, transform 1.5s;
+  position: relative;
+  }
+  .model-1 .graph:before {
+	/* -ms-transform: rotate(140deg);
+	-webkit-transform: rotate(140deg); */
+	transform: rotate(0deg);
+	border-color: #0532fc;
+  transition: transform 1.5s, border-color 1.5s;
+  }
+
+  .model-1 .graph.animate {
+    color: #0532fc;
+    }
+
+    .model-1 .graph.animate:before {
+    /* -ms-transform: rotate(140deg);
+    -webkit-transform: rotate(140deg); */
+    transform: rotate(140deg);
+    border-color: #0532fc;
+    }
+
+
+
+
+  
+  section.model-2 .graph {
+	color: #041399;
+  transition: color 1.5s, transform 1.5s;
+  position: relative;
+  }
+  section.model-2 .graph:before {
+	/* -ms-transform: rotate(145deg);
+	-webkit-transform: rotate(145deg); */
+	transform: rotate(0deg);
+	border-color: #041399;
+  transition: transform 1.5s, border-color 1.5s;
+  }
+  
+  section.model-2 .graph.animate {
+    color: #041399;
+  
+    }
+    section.model-2 .graph.animate:before {
+    /* -ms-transform: rotate(145deg);
+    -webkit-transform: rotate(145deg); */
+    transform: rotate(145deg);
+    border-color: #041399;
+    /* transition: transform 0.5s, border-color 0.5s; */
+    }
+
+
+
+
+  section.model-3 .javaScript:before {
+	-ms-transform: rotate(40deg);
+	-webkit-transform: rotate(40deg);
+	transform: rotate(40deg);
+	border-color: #FEDA3E;
+  }
+  section.model-3 .jQuery:before {
+	-ms-transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+	border-color: #0669AD;
+  }
+  
+  section.model-3 .graph {
+	color: #2DABD8;
+  }
+  
+  section.model-4 .graph {
+	color: #2f7aec;
+  transition: color 1.5s, transform 1.5s;
+  position: relative;
+  }
+  section.model-4 .graph:before {
+	/* -ms-transform: rotate(130deg);
+	-webkit-transform: rotate(130deg); */
+	transform: rotate(0deg);
+	border-color: #2f7aec;
+  transition: transform 1.5s, border-color 1.5s;
+
+  }
+
+
+  section.model-4 .graph.animate {
+    color: #2f7aec;
+    
+    }
+    section.model-4 .graph.animate:before {
+    /* -ms-transform: rotate(130deg);
+    -webkit-transform: rotate(130deg); */
+    transform: rotate(130deg);
+    border-color: #2f7aec;  
+    }
+  
+  @-webkit-keyframes demo {
+	0% {
+	  -webkit-transform: rotate(0deg);
+	  transform: rotate(0deg);
+	}
+	50% {
+	  -webkit-transform: rotate(180deg);
+	  transform: rotate(180deg);
+	}
+  }
+  @keyframes demo {
+	0% {
+	  -ms-transform: rotate(0deg);
+	  -webkit-transform: rotate(0deg);
+	  transform: rotate(0deg);
+	}
+	50% {
+	  -ms-transform: rotate(180deg);
+	  -webkit-transform: rotate(180deg);
+	  transform: rotate(180deg);
+	}
+  }
+
+
+
+
+ 
+
+
+
