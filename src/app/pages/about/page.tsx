@@ -24,7 +24,7 @@ export default function About() {
           </div>
           <div className="w-full sm:w-[70%] md:w-[60%] lg:w-[50%]">
       <h1 className="text-white font-bold text-3xl mt-6 mb-8">
-        Hi, I'm Manish Arya
+        Hi, I&apos;m Manish Arya
       </h1>
 
       <div className="text-white w-full sm:w-[35rem] md:w-[30rem] lg:w-[25rem] mb-10">

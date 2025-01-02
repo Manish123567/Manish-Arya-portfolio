@@ -120,11 +120,7 @@ const Home = () => {
 <>
     <InfiniteMovingCardsDemo/>
     <main className="grid w-full min-h-screen text-gray-100 bg-black place-content-center" id='skills'>
-      {/* <SkillDisplay /> */}
-      {/* <Skills/> */}
-      {/* <Skills2/> */}
-     {/* <Skills3/> */}
-    
+
      <Skills4/>
      <Skills5/>
      <Skills6/>
